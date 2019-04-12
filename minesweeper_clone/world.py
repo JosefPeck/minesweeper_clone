@@ -9,6 +9,12 @@ class World:
 	height = 0
 
 	def __init__(self, width: int, height: int, mines: int):
+		"""Initialize.
+
+		:param int width:
+		:param int height:
+		:param int mines:
+		"""
 		self.width = width
 		self.height = height
 		self.mines = mines

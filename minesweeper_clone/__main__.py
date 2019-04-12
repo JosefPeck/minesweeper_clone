@@ -11,6 +11,7 @@ def main():
 	world_ = world.World(10, 10, 10)
 	running = True
 	while running:
+		con.print_world(world_.height, world_.world)
 		con.get_input()
 
 
