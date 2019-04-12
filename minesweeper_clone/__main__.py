@@ -8,11 +8,11 @@ def main():
 	"""Run main."""
 	print('Hello world')
 	con = console.Console()
-	world_ = world.World(10, 10, 10)
+	w = world.World(10, 10, 10)
 	running = True
 	while running:
-		con.print_world(world_.height, world_.world)
-		con.get_input()
+		con.print_world(w.height, w.world)
+		w.handle_input(con.get_input())
 
 
 if __name__ == '__main__':

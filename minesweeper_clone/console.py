@@ -17,7 +17,7 @@ class Console:
 			row_buffer = []
 			if index % world_height == 0:
 				row_buffer.append('\n')
-			row_buffer.append(str(cell))
+			row_buffer.append(cell)
 			final_buffer.append(''.join(row_buffer))
 		return ''.join(final_buffer)
 
@@ -25,14 +25,4 @@ class Console:
 		print(self.draw_world(world_height, world_data))
 	
 	def get_input(self):
-		instruction = input('> ')
-		if instruction == 'q':
-			exit()
-		instruction = instruction.split(' ')
-		try:
-			instruction[0]
-			instruction[1]
-		except IndexError:
-			print('?')
-			return self.get_input()
-		return instruction
+		return input('> ')
