@@ -1,6 +1,8 @@
 #!/usr/bin/env python3.7
 # -*- coding: utf-8 -*-
 
+import random
+
 
 class World:
 	width = 0

@@ -10,3 +10,13 @@ class Console:
 
 	def clear_screen(self):
 		os.system('cls' if os.name == 'nt' else 'clear')
+
+	def draw_world(self, world_height: int, world_data: list):
+		final_buffer = []
+		for index, cell in enumerate(world_data):
+			row_buffer = []
+			if index % world_height == 0:
+				row_buffer.append('\n')
+			row_buffer.append(str(cell))
+			final_buffer.append(''.join(row_buffer))
+		print(''.join(final_buffer))
