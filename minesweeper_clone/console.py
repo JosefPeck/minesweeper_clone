@@ -22,4 +22,17 @@ class Console:
 		return ''.join(final_buffer)
 
 	def print_world(self, world_height: int, world_data: list):
-		print(self.draw_screen(world_height, world_data))
+		print(self.draw_world(world_height, world_data))
+	
+	def get_input(self):
+		instruction = input('> ')
+		if instruction == 'q':
+			exit()
+		instruction = instruction.split(' ')
+		try:
+			instruction[0]
+			instruction[1]
+		except IndexError:
+			print('?')
+			return self.get_input()
+		return instruction

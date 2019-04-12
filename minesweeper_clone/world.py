@@ -8,9 +8,10 @@ class World:
 	width = 0
 	height = 0
 
-	def __init__(self, width: int, height: int):
+	def __init__(self, width: int, height: int, mines: int):
 		self.width = width
 		self.height = height
+		self.mines = mines
 		self.world = [0] * (width * height)
 
 	def generate(self):
