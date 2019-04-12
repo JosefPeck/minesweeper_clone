@@ -14,5 +14,9 @@ class World:
 		self.world = [0] * (width * height)
 
 	def generate(self):
+		length = len(self.world)
 		for i in range(0, self.mines):
-			self.world[random.randrange(self.world)] = 1
+			self.world[random.randrange(length)] = 1
+
+	def get(self):
+		return self.world

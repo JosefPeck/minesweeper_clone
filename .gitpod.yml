@@ -1,3 +1,3 @@
 image: python:3.7.2-alpine3.9
 tasks:
-- command: /bin/cp -f .pylintrc ~/.pylintrc && /bin/cp -f .pylintrc /etc/pylintrc
+- command: /bin/cp -f .pylintrc ~/.pylintrc && /bin/cp -f .pylintrc /etc/pylintrc && (yes | pip uninstall pylint); (yes | pip3 uninstall pylint)
