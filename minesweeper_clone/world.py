@@ -18,5 +18,5 @@ class World:
 		for i in range(0, self.mines):
 			self.world[random.randrange(length)] = 1
 
-	def get(self):
-		return self.world
+	def get(self, x: int, y: int) -> int:
+		return self.world[x + y * self.height]
